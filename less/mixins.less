@@ -1,1 +1,27 @@
 // Mixins Here
+.display() {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+ .center() {
+     align-items: center;
+     justify-content: center;
+ }
+ .button(@background, @font) {
+     background-color: blue;
+     font-size: 2em;
+ }
+   
+    &:hover() {
+        background-color: brown;
+        color: red;
+    }
+    @phone(max-width: 500px) {
+        nav, div
+        display: flex;
+        flex-direction: column;
+    }
+  
+ 
