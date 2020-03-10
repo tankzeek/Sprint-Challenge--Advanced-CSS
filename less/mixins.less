@@ -1,27 +1,34 @@
 // Mixins Here
 .display() {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     
-}
+ }
 
  .center() {
      align-items: center;
      justify-content: center;
  }
  .button(@background, @font) {
-     background-color: blue;
-     font-size: 2em;
- }
-   
-    &:hover() {
-        background-color: brown;
-        color: red;
+     background-color: @background;
+     font-size: @font;
+ }  
+    .btn {
+        @btn-bg-color: #22283A;
+        &:hover {
+            background-color: darken(skyblue, 10%);
+            
+        }
+
     }
-    @phone(max-width: 500px) {
-        nav, div
-        display: flex;
-        flex-direction: column;
+   
+    
+        @media(max-width: 500px) {
+        nav, div {
+            display: flex;
+            flex-direction: column;
+        }
+        
     }
   
  
